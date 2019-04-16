@@ -1,0 +1,198 @@
+.comparison {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    .image-slider {
+        position: relative;
+        display: inline-block;
+        line-height: 0;
+        margin: 0 auto;
+        max-width: 100vw;
+        height: 100vh;
+    }
+    .block {
+        user-select: none;
+        max-width: 100%;
+    }
+    .parent {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 95vw;
+        // width: 4rem;
+        overflow: hidden;
+        // resize: horizontal;
+        max-width: 100vw;
+        height: 100vh;
+        z-index: 500;
+        border-right: 3px solid white;
+    }
+    .parent:before {
+        content: "";
+        display: block;
+        width: 13px;
+        height: 13px;
+        overflow: hidden;
+        position: absolute;
+        // resize: horizontal;
+        right: 3px;
+        bottom: 3px;
+        background-clip: content-box;
+        background: linear-gradient(-45deg, black 50%, transparent 0);
+        -webkit-filter: drop-shadow(0 0 2px black);
+        filter: drop-shadow(0 0 2px black);
+    }
+    h2 {
+        @media only screen and (min-width: $xlarge-break) {
+            font-size: 5.063em;
+            line-height: 5.1rem;
+            font-weight: 700;
+        }
+    }
+    .tiny-text {
+        position: absolute;
+        white-space: nowrap;
+        bottom: -14px;
+        right: 111px;
+        text-align: center;
+        width: auto;
+        -webkit-animation: bounce 1.2s ease-in infinite alternate;
+    }
+    h3 {
+        position: absolute;
+        white-space: nowrap;
+        bottom: 7px;
+        right: 75px;
+        width: auto;
+        span {
+            font-size: 1.5rem;
+        }
+        // -webkit-animation: glow 1s ease-in-out infinite alternate;
+        // -moz-animation: glow 1s ease-in-out infinite alternate;
+        // animation: glow 1s ease-in-out infinite alternate;
+        -webkit-animation:bounce 1.2s ease-in infinite alternate;
+    }
+    .dragger {
+        position: absolute;
+        bottom: 6rem;
+        z-index: 500;
+        transform: translateX(-50%);
+        transform-origin: 0 50%;
+        transition: transform .2s;
+        user-select: none;
+        display: flex;
+        flex-direction: row;
+        border-radius: 50%;
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.473);
+        &:active {
+            transform: scale(1.1) translateX(-50%);
+            ;
+        }
+        img {
+            pointer-events: none;
+            max-width: unset;
+        }
+    }
+    @media only screen and (max-width: $small-break) {
+        .dragger {
+            bottom: 8rem;
+        }
+        h3 {
+            bottom: 15px;
+            right: 70px;
+            font-size: 1.5rem;
+            span {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 0 0;
+    }
+    to {
+        text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px $primary-blue-light, 0 0 8px $primary-blue-light, 0 0 12px $primary-blue-light;
+    }
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        margin-right: 0;
+    }
+    25% {
+        margin-right: 3px;
+    }
+    50% {
+        margin-right: 6px;
+    }
+    75% {
+        margin-right: 3px;
+    }
+    100% {
+        margin-right: 0;
+    }
+    // from {
+    //     margin-right: 2px;
+    // }
+}
+
+.first-noisy {
+    background: url("../Assets/img/backgrounds/Bg_HomeBusy02.jpg") no-repeat center center fixed;
+    padding: $menu-height 2rem 0 1rem;
+}
+
+.second-control {
+    padding: $menu-height 2rem 0 1rem;
+    background: url("../Assets/img/home/TV-Room.jpg") no-repeat center center fixed;
+    .carousel {
+        button {
+            color: $primary-pink !important;
+            font-size: 35px !important;
+            top: 1.5rem;
+        }
+        .slider-control-bottomcenter {
+            top: 6rem !important;
+            left: 0 !important;
+            transform: none !important;
+        }
+    }
+    @media only screen and (max-width: $small-break) {
+        background-image: url("../Assets/img/home/TV-Room_Mobile.jpg"), linear-gradient(to bottom, $control-bg, $control-bg-2);
+        background-size: 100% auto, contain;
+        background-position: top center;
+        padding: 30rem 0 0 2rem;
+        .btn {
+            margin: .5rem 0 0 .5rem;
+        }
+    }
+    .banner-heading {
+        @media only screen and (min-width: $xlarge-break) {
+            font-size: 10.574em;
+            line-height: 8.6rem;
+            font-weight: 700;
+        }
+    }
+    .bottom-buttons {
+        &.left {
+            @media only screen and (min-width: $large-break) {
+                right: unset;
+                left: 8.333%;
+                bottom: 7rem;
+                .btn {
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+}
+
+.compared {
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}

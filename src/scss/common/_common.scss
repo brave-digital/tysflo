@@ -1,0 +1,194 @@
+body {
+    font-family: $font;
+    height: 100vh;
+    margin: 0;
+    overflow: none;
+    scroll-behavior: smooth;
+    background-color: $primary-blue-dark;
+    // padding: 0 2rem;
+}
+
+@media screen and (orientation: portrait) {
+    .use-portrait {
+        display: none;
+    }
+}
+
+@media screen and (max-width: $small-break) and (orientation: landscape) {
+    .app-wrapper {
+        display: none;
+    }
+    .use-portrait {
+        display: block;
+        z-index: 500;
+        color: white;
+        width: 50%;
+        height: auto;
+        margin: 45vh auto;
+    }
+}
+
+.gradient {
+    background: linear-gradient( to bottom, $primary-blue-dark, rgba($primary-blue-dark, 0));
+    position: fixed;
+    z-index: 900;
+    top: 0;
+    left: 0;
+    height: 15vh;
+    width: 100vw;
+}
+
+.app-wrapper {
+    background-image: linear-gradient( to bottom, rgba(64, 64, 64, 1) 0%, rgba(64, 64, 64, 0) 10%, rgba(64, 64, 64, 0) 90%, rgba(64, 64, 64, 1) 100%);
+}
+
+.section {
+    // position: relative;
+    padding: $menu-height 0 0 0;
+    height: 100%;
+    ul {
+        li {
+            font-weight: 300;
+            margin: 5px 0 0 0;
+        }
+    }
+    &.black {
+        background-color: $primary-black-grey;
+        color: $primary-white;
+    }
+    &.greydient {
+        background: linear-gradient(15deg, #616b73, #32393f);
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.row-padding-bottom {
+    padding-bottom: 2rem;
+}
+
+.row-padding-top {
+    padding-top: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.padding-left-10px {
+    padding-left: 10px;
+}
+
+.blue-hr,
+.yellow-hr,
+.pink-hr,
+.dark-grey-hr,
+.blue-darker-hr,
+.yellow-hr,
+.pink-hr {
+    min-height: 2px;
+    margin-bottom: 2rem;
+    &.small {
+        width: 2rem;
+    }
+}
+
+.blue-hr {
+    // background: $primary-blue-lighter;
+    background: #5de8f9;
+}
+
+.blue-darker-hr {
+    background: $primary-blue;
+}
+
+.yellow-hr {
+    background: $primary-yellow;
+}
+
+.pink-hr {
+    background: $primary-pink;
+}
+
+.dark-grey-hr {
+    background: $dark-grey;
+}
+
+.no-bottom-margin {
+    margin-bottom: 0;
+}
+
+.bottom-margin {
+    margin: 0 0 1rem 0;
+}
+
+.bigger-bottom-margin {
+    margin: 0 0 2rem 0;
+}
+
+.bigger-top-margin {
+    margin-top: 2rem;
+}
+
+.top-margin {
+    margin-top: 1rem;
+}
+
+.margin-top-bottom {
+    margin: 2rem 0;
+}
+
+.colour-hr {
+    height: 8px;
+    width: 100%;
+}
+
+.small-pad-top {
+    padding-top: 10px;
+}
+
+.bg-overlay {
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+ol,
+ul {
+    li {
+        font-weight: 300;
+        margin: .2rem 0 0 0;
+        padding: 0 0 0 0;
+    }
+}
+
+@media screen and (max-width: $small-break) {
+    .row-padding-bottom {
+        padding: 0 0 1rem 0;
+    }
+    .section {
+        padding: 3em 0 3.5em 0;
+    }
+    .mobi-hidden {
+        display: none;
+    }
+}
+
+@media screen and (max-width: $xsmall-break) {
+    .mobi-hidden {
+        display: none;
+    }
+}
+
+.ts-cs-link {
+    position: fixed;
+    bottom: 1rem;
+    left: 2rem;
+    z-index: 500;
+    a {
+        font-weight: 100;
+        color: $primary-blue-lighter;
+        font-size: .8rem;
+    }
+}

@@ -1,0 +1,103 @@
+.hamburger {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    width: 37px;
+    height: 37px;
+    z-index: 950;
+    @media screen and (max-width: $med-break) {
+        right: 2rem;
+    }
+}
+
+.mobi-nav {
+    color: $primary-white;
+    background: $primary-blue;
+    width: 80vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    transition: 0.3s ease;
+    z-index: 955;
+    @media screen and (max-width: $ipad-pro-portrait) and (orientation: portrait) {
+        p {
+            font-size: 1.2em;
+            font-weight: 600;
+            line-height: 1.2rem;
+        }
+    }
+    &.open {
+        right: 0;
+    }
+    .menu-header {
+        padding: 2rem 1.8rem;
+        border-bottom: 1px solid rgba(216, 216, 216, 0.32);
+        display: flex;
+        justify-content: space-between;
+        .close-btn {
+            display: flex;
+        }
+        .sm-icons {
+            display: flex;
+            img {
+                margin: 0 7px;
+            }
+            .twitter-ico {
+                img {
+                    margin: 3px 7px;
+                    width: 70%;
+                }
+            }
+        }
+    }
+    .head {
+        padding: 0.7rem 1.8rem;
+        cursor: pointer;
+        border-bottom: 1px solid rgba(216, 216, 216, 0.32);
+        .btn-title-holder {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-right: 1.8rem;
+            p {
+                font-weight: 600;
+                margin: 8px 0;
+                display: flex;
+            }
+            img {
+                display: flex;
+            }
+        }
+        .body {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: 0.2s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            a {
+                display: flex;
+                font-size: 0.7rem 1.8rem;
+                font-weight: 600;
+                color: $primary-white;
+                text-decoration: none;
+                padding: 20px 0;
+            }
+        }
+        &.active {
+            .body {
+                padding: 0.7rem 1.8rem;
+                max-height: 600px;
+                transition: 0.2s ease-in-out;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $ipad-pro-landscape) {
+    .hamburger,
+    .mobi-nav {
+        display: none;
+    }
+}

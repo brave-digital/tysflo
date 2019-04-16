@@ -1,0 +1,89 @@
+.carousel {
+    .slider {
+        max-height: 40vh;
+    }
+    button {
+        background-color: transparent;
+        padding: 0 !important;
+        border: none;
+        max-height: 5rem;
+        max-width: 5rem;
+        margin-right: 10px;
+        cursor: pointer;
+        outline: none;
+        color: $primary-blue-light !important;
+        font-size: 35px !important;
+        position: relative;
+        &.left,
+        &.right {
+            top: -3rem;
+        }
+        &.left {
+            right: 4rem;
+        }
+        &.right {
+            left: 4rem;
+        }
+    }
+    .slider-control-bottomcenter {
+        top: 22rem !important;
+        left: 0 !important;
+        transform: none !important;
+    }
+    .endSlide {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .icon-info {
+            display: flex;
+            width: 49%;
+            flex-direction: column;
+            div {
+                display: flex;
+                flex-direction: row;
+                align-content: center;
+                align-items: center;
+                span {
+                    color: $primary-blue-lighter;
+                    font-size: 4rem;
+                }
+                p {
+                    margin: 0 0 0 0.5rem;
+                }
+            }
+            // a {
+            //     justify-self: flex-end;
+            //     align-self: flex-end;
+            //     .btn {
+            //         margin: 0 0 1rem 1rem;
+            //     }
+            // }
+        }
+    }
+    @media screen and (max-width: $small-break) {
+        height: 80%;
+        .slider {
+            max-height: 90vh;
+        }
+        button {
+            &.left,
+            &.right {
+                top: -2rem;
+            }
+            &.left {
+                right: 2rem;
+            }
+            &.right {
+                left: 2rem;
+            }
+        }
+        .slider-control-bottomcenter {
+            top: 17.5rem !important;
+        }
+    }
+    @media screen and (min-width: $xlarge-break) {
+        h3 {
+            line-height: 2.8rem;
+        }
+    }
+}

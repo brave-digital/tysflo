@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.vscode/
+src/Assets/*.m4v
+src/Assets/*.psd
+src/Assets/*.mp4
+!src/Assets/bg-video.m4v
+.DS_Store

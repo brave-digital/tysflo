@@ -1,0 +1,84 @@
+.page-bg {
+    width: calc(100vw - 2rem);
+    height: calc(100vh - #{$menu-height});
+    padding: $menu-height 2rem 0 0;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    &.home {
+        background-image: url("../Assets/img/backgrounds/Bg_HomeBusy02.jpg");
+    }
+    &.contact,
+    &.media-owner {
+        background-image: url("../Assets/img/backgrounds/Bg_MediaOwner.jpg");
+    }
+    &.brand-owner {
+        background-image: url("../Assets/img/backgrounds/bg_BrandOwner.jpg");
+        &.second {
+            background-image: url("../Assets/img/backgrounds/Bg_BrandOwnerTV.jpg");
+        }
+    }
+    &.intro {
+        background-image: url("../Assets/img/backgrounds/Bg_IntroducingTysflo.jpg");
+        &.second {
+            background-image: url("../Assets/img/backgrounds/Bg_IntroducingTysflo02.jpg");
+        }
+        &.third {
+            background-image: url("../Assets/img/backgrounds/Bg_IntroducingTysflo02.jpg");
+        }
+        h3 {
+            font-size: 2rem;
+            line-height: 2.1rem;
+        }
+    }
+    &.contact {
+        padding-bottom: 13rem;
+    }
+    &.about {
+        background-image: url("../Assets/img/backgrounds/Bg_MediaOwner.jpg");
+        padding-bottom: 13rem;
+    }
+    &.terms {
+        padding-bottom: 13rem;
+        ol {
+            margin-left: 0;
+            padding-left: 0;
+            counter-reset: list;
+            li {
+                list-style: none;
+                list-style-position: outside;
+                margin-left: 1em;
+                &:before {
+                    counter-increment: list;
+                    content: counter(list, lower-alpha) ") ";
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: $small-break) {
+        background-size: cover;
+        min-height: 100vh;
+        height: auto;
+        &.media-owner {
+            background-image: url("../Assets/img/backgrounds/Bg_MediaOwner_Mobile.jpg");
+        }
+        &.brand-owner {
+            background-image: url("../Assets/img/backgrounds/bg_BrandOwner_Mobile.jpg");
+            &.second {
+                background-image: url("../Assets/img/backgrounds/Bg_BrandOwner_Mobile02.jpg");
+            }
+        }
+        &.intro {
+            background-image: url("../Assets/img/backgrounds/Bg_IntroducingTysflo_Mobile.jpg");
+            padding-bottom: 6rem;
+            &.third,
+            &.second {
+                background-image: url("../Assets/img/backgrounds/Bg_IntroducingTysflo_Mobile_02.jpg");
+            }
+        }
+        &.about {
+            background-image: url("../Assets/img/backgrounds/Bg_MediaOwner_Mobile.jpg");
+        }
+    }
+}

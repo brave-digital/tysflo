@@ -1,0 +1,65 @@
+.logo-grid {
+    .logos {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        height: auto;
+        max-width: 100%;
+        margin: 0 auto;
+        // padding: 10px;
+        line-height: 0;
+        .grid-item {
+            width: 10%;
+            height: 10%;
+            background-color: $primary-blue-dark;
+            &:hover {
+                transform: scale(1.1);
+            }
+            margin-right: 2px;
+        }
+        @media screen and (max-width: $small-break) {
+            width: 100%;
+            .grid-item {
+                width: 50%;
+                height: 50%;
+            }
+        }
+    }
+}
+
+.img-holder {
+    // max-width: 100%;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    // overflow-x: scroll;
+    // overflow-y: hidden;
+    overflow: hidden;
+    .profile {
+        position: relative;
+        margin: 0 1rem 0 0;
+        .info-block {
+            background: $primary-pink;
+            position: absolute;
+            background: #af005d;
+            bottom: 3px;
+            opacity: 0;
+            padding: .5rem 0;
+            width: 100%;
+            transition: opacity .3s ease-in;
+            .name {
+                margin: 0 0 0 .5rem;
+                font-weight: 500;
+            }
+            .job {
+                margin: 0 0 0 .4rem;
+            }
+        }
+        &:hover {
+            .info-block {
+                opacity: .75;
+            }
+        }
+    }
+}
